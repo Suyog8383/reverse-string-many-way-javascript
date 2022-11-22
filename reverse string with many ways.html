@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+</html>
+<script>
+  //1 way in-built function
+  let name = "suyog";
+  //   let revName = name.split("").reverse().join("");
+  //   console.log("@SN ", revName);
+
+  //2 way
+  let rev = "";
+  for (let i = name.length - 1; i >= 0; i--) {
+    rev += name[i];
+  }
+  console.log("@SN ", rev);
+
+  //3 way recursion with substring and charAt
+  function reverseFun(fun) {
+    return fun === "" ? "" : reverseFun(fun.substr(1)) + fun.charAt(0);
+  }
+  console.log("@SN ", reverseFun("suyog"));
+</script>
